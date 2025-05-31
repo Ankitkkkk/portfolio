@@ -55,23 +55,25 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="max-w-2xl mx-auto py-16 px-4 text-[#222]">
-      <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2">Experience</h1>
-      <div className="flex flex-col gap-10">
-        {experiences.map((exp, idx) => (
-          <div key={idx} className="bg-[#f7f7f7] border border-[#e0e0e0] rounded p-6 shadow-sm">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-              <div className="font-semibold text-lg">{exp.role}</div>
-              <div className="text-sm text-[#888]">{exp.duration}</div>
+    <div className="flex justify-center items-start min-h-[60vh] w-full">
+      <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full mt-8">
+        <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2 text-[#222]">Experience</h1>
+        <div className="flex flex-col gap-10">
+          {experiences.map((exp, idx) => (
+            <div key={idx} className="bg-[#f7f7f7] border border-[#e0e0e0] rounded p-6 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                <div className="font-semibold text-lg text-[#222]">{exp.role}</div>
+                <div className="text-sm text-[#888]">{exp.duration}</div>
+              </div>
+              <div className="font-medium text-[#444] mb-1">{exp.company} <span className="text-xs text-[#aaa]">{exp.location}</span></div>
+              <ul className="list-disc ml-5 mt-2 text-[#333] text-sm space-y-1">
+                {exp.highlights.map((h, i) => (
+                  <li key={i}>{h}</li>
+                ))}
+              </ul>
             </div>
-            <div className="font-medium text-[#444] mb-1">{exp.company} <span className="text-xs text-[#aaa]">{exp.location}</span></div>
-            <ul className="list-disc ml-5 mt-2 text-[#333] text-sm space-y-1">
-              {exp.highlights.map((h, i) => (
-                <li key={i}>{h}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
