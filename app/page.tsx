@@ -54,6 +54,10 @@ const experiences = [
   }
 ];
 
+const topSkills = [
+  "Java", "Spring Boot", "Microservices", "React", "Next.js", "SQL", "AWS", "Docker", "Kubernetes"
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center w-full px-4">
@@ -64,7 +68,8 @@ export default function Home() {
             <Image src="/pfp.jpg" alt="Ankit Kumar" width={160} height={160} priority />
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight mb-2 text-[#222]">Ankit Kumar</h1>
-          <p className="text-lg text-[#333] font-medium mb-6">Senior Software Engineer & Backend Specialist</p>
+          <p className="text-lg text-[#333] font-medium mb-2">Senior Software Engineer & Backend Specialist</p>
+          <p className="text-sm text-[#666] mb-4">1000+ LinkedIn followers • 500+ connections • Active in coding competitions</p>
           <nav className="flex gap-6 mt-2 text-base font-medium mb-6">
             <a href="#about" className="hover:text-[#6c757d] transition">About</a>
             <a href="#experience" className="hover:text-[#6c757d] transition">Experience</a>
@@ -75,6 +80,18 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
             <a href="https://github.com/Ankitkkkk" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded bg-[#222] text-white hover:bg-[#444] transition">GitHub</a>
             <a href="https://www.linkedin.com/in/iankitk/" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded border border-[#222] text-[#222] hover:bg-[#e0e0e0] transition">LinkedIn</a>
+            <a href="/ankit-resume.pdf" className="px-5 py-2 rounded bg-[#222] text-white hover:bg-[#444] transition">Download Resume</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Section */}
+      <section className="w-full flex justify-center scroll-mt-24 mt-8">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
+          <h1 className="text-2xl font-bold mb-4 border-b border-[#e0e0e0] pb-2 text-[#222]">Featured</h1>
+          <div className="flex flex-col gap-2">
+            <a href="#" className="text-blue-600 hover:underline font-semibold">How I Optimized API Gateways for 99Acres</a>
+            <span className="text-sm text-[#666]">Technical Blog (placeholder)</span>
           </div>
         </div>
       </section>
@@ -104,6 +121,18 @@ export default function Home() {
               <div className="font-medium mb-1 text-[#222]">Tools</div>
               <div className="text-[#444]">git, Github, Intellij, VScode, maven, gradle, redis, kafka, REST APIs, CI/CD, AWS</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Skills Section */}
+      <section className="w-full flex justify-center scroll-mt-24 mt-8">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
+          <h1 className="text-2xl font-bold mb-4 border-b border-[#e0e0e0] pb-2 text-[#222]">Top Skills</h1>
+          <div className="flex flex-wrap gap-3 mt-2">
+            {topSkills.map(skill => (
+              <span key={skill} className="px-4 py-1 rounded-full bg-[#f7f7f7] border border-[#e0e0e0] text-[#222] font-medium text-sm shadow-sm">{skill}</span>
+            ))}
           </div>
         </div>
       </section>
@@ -152,6 +181,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Interests & Volunteering Section */}
+      <section className="w-full flex justify-center scroll-mt-24 mt-8">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
+          <h1 className="text-2xl font-bold mb-4 border-b border-[#e0e0e0] pb-2 text-[#222]">Interests & Volunteering</h1>
+          <p className="text-[#222]">Active member of competitive programming communities (CodeChef, Codeforces). Interested in distributed systems, cloud infrastructure, and mentoring junior developers.</p>
+        </div>
+      </section>
+
       {/* Achievements Section */}
       <section id="achievements" className="w-full flex justify-center scroll-mt-24 mt-16">
         <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
@@ -174,6 +211,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Recommendations Section */}
+      <section className="w-full flex justify-center scroll-mt-24 mt-8">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
+          <h1 className="text-2xl font-bold mb-4 border-b border-[#e0e0e0] pb-2 text-[#222]">Recommendations</h1>
+          <div className="flex flex-col gap-4 mt-2">
+            <blockquote className="text-[#333] italic border-l-4 border-[#e0e0e0] pl-4">“Ankit is a highly skilled engineer who consistently delivers high-quality solutions.”<br /><span className="text-[#888]">— Priya S. (Manager, 99Acres)</span></blockquote>
+            <blockquote className="text-[#333] italic border-l-4 border-[#e0e0e0] pl-4">“His leadership and technical depth made a huge impact on our team.”<br /><span className="text-[#888]">— Rahul G. (Colleague, Ipsator)</span></blockquote>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="w-full flex justify-center scroll-mt-24 mt-16 mb-12">
         <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
@@ -182,10 +230,11 @@ export default function Home() {
             <div className="mb-2"><span className="font-medium text-[#222]">Phone:</span> <a href="tel:+918178231961" className="text-[#6c757d] hover:underline">+91 8178231961</a></div>
             <div className="mb-2"><span className="font-medium text-[#222]">Email:</span> <a href="mailto:kr.ankit253@gmail.com" className="text-[#6c757d] hover:underline">kr.ankit253@gmail.com</a></div>
           </div>
-          <div className="flex gap-6 mt-4">
+          <div className="flex gap-6 mt-4 mb-4">
             <a href="https://github.com/Ankitkkkk" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded bg-[#222] text-white hover:bg-[#444] transition">GitHub</a>
             <a href="https://www.linkedin.com/in/iankitk/" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded border border-[#222] text-[#222] hover:bg-[#e0e0e0] transition">LinkedIn</a>
           </div>
+          <a href="/ankit-resume.pdf" className="px-5 py-2 rounded bg-[#222] text-white hover:bg-[#444] transition">Download Resume</a>
         </div>
       </section>
     </div>

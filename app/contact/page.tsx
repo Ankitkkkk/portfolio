@@ -13,6 +13,7 @@ export default function Contact() {
           <a href="https://github.com/Ankitkkkk" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded bg-[#222] text-white hover:bg-[#444] transition">GitHub</a>
           <a href="https://www.linkedin.com/in/iankitk/" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded border border-[#222] text-[#222] hover:bg-[#e0e0e0] transition">LinkedIn</a>
         </div>
+        <a href="/ankit-resume.pdf" className="px-5 py-2 rounded bg-[#222] text-white hover:bg-[#444] transition">Download Resume</a>
       </div>
     </div>
   );
