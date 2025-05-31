@@ -27,15 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f7f7f7] text-[#222] min-h-screen`}>
-        <header className="flex flex-col items-center gap-4 mt-8 mb-8">
+        <header className="flex flex-col items-center gap-4 mt-8 sm:mt-12 mb-8 px-4 sm:px-6 lg:px-8">
           <Link href="/">
-            <div className="rounded-full overflow-hidden shadow-lg border-4 border-[#e0e0e0] w-24 h-24 mx-auto">
-              <Image src="/pfp.jpg" alt="Ankit Kumar" width={96} height={96} priority />
+            <div className="rounded-full overflow-hidden shadow-lg border-4 border-[#e0e0e0] w-24 h-24 sm:w-28 sm:h-28 mx-auto">
+              <Image src="/pfp.jpg" alt="Ankit Kumar" width={112} height={112} priority />
             </div>
           </Link>
-          <h1 className="text-2xl font-bold tracking-tight">Ankit Kumar</h1>
-          <p className="text-base text-[#444]">Senior Software Engineer & Backend Specialist</p>
-          <nav className="flex gap-6 mt-2 text-base font-medium">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-center">Ankit Kumar</h1>
+          <p className="text-base sm:text-lg text-[#444] text-center">Senior Software Engineer & Backend Specialist</p>
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-2 text-base font-medium text-center">
             <Link href="/" className="hover:text-[#6c757d] transition">Home</Link>
             <Link href="/about" className="hover:text-[#6c757d] transition">About</Link>
             <Link href="/experience" className="hover:text-[#6c757d] transition">Experience</Link>
@@ -44,11 +44,24 @@ export default function RootLayout({
             <Link href="/contact" className="hover:text-[#6c757d] transition">Contact</Link>
           </nav>
         </header>
-        <main className="flex flex-col items-center justify-center w-full flex-1 px-4">
+
+        <main className="flex flex-col items-center justify-center w-full flex-1 px-4 sm:px-6 lg:px-8">
           {children}
         </main>
-        <footer className="mt-16 mb-4 text-sm text-[#888] text-center">Noida, Delhi NCR &bull; +91 8178231961 &bull; kr.ankit253@gmail.com</footer>
+
+        <footer className="mt-16 mb-4 text-sm text-[#888] text-center px-4">
+          <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
+            <span>Noida, Delhi NCR</span>
+            <span>&bull;</span>
+            <span>+91 8178231961</span>
+            <span>&bull;</span>
+            <a href="mailto:kr.ankit253@gmail.com" className="hover:underline">
+              kr.ankit253@gmail.com
+            </a>
+          </div>
+        </footer>
       </body>
+
     </html>
   );
 }
