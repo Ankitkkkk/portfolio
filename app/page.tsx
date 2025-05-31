@@ -59,13 +59,13 @@ export default function Home() {
     <div className="flex flex-col items-center w-full px-4">
       {/* Hero Section */}
       <section className="flex flex-col items-center w-full">
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full mt-8 flex flex-col items-center">
-          <div className="rounded-full overflow-hidden shadow-lg border-4 border-[#e0e0e0] w-40 h-40 mb-4">
+        <div className="bg-white rounded-xl shadow-lg p-10 max-w-2xl w-full mt-12 flex flex-col items-center">
+          <div className="rounded-full overflow-hidden shadow-lg border-4 border-[#e0e0e0] w-40 h-40 mb-6">
             <Image src="/pfp.jpg" alt="Ankit Kumar" width={160} height={160} priority />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight mb-2">Ankit Kumar</h1>
-          <p className="text-lg text-[#444] mb-4">Senior Software Engineer & Backend Specialist</p>
-          <nav className="flex gap-6 mt-2 text-base font-medium mb-4">
+          <h1 className="text-4xl font-extrabold tracking-tight mb-2 text-[#222]">Ankit Kumar</h1>
+          <p className="text-lg text-[#333] font-medium mb-6">Senior Software Engineer & Backend Specialist</p>
+          <nav className="flex gap-6 mt-2 text-base font-medium mb-6">
             <a href="#about" className="hover:text-[#6c757d] transition">About</a>
             <a href="#experience" className="hover:text-[#6c757d] transition">Experience</a>
             <a href="#projects" className="hover:text-[#6c757d] transition">Projects</a>
@@ -80,8 +80,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="w-full flex justify-center scroll-mt-24">
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full mt-12">
+      <section id="about" className="w-full flex justify-center scroll-mt-24 mt-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
           <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2 text-[#222]">About Me</h1>
           <p className="mb-6 text-lg text-[#222]">Software Developer focused on delivering impactful results, tackling dynamic challenges, and building scalable backend systems. Skilled in project management, user-centric problem-solving, and cross-team collaboration. Proficient in Java, Spring Boot, Microservices, Kubernetes, Docker, Terraform, MySQL, and PostgreSQL. Experienced in designing APIs, integrating payment gateways, optimizing SQL queries, and enhancing server performance with caching. Adept at technical interviews, test suite integration, and unit testing. Strong foundation in Data Structures and Algorithms.</p>
           <h2 className="text-xl font-semibold mt-10 mb-2 text-[#222]">Education</h2>
@@ -109,8 +109,8 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="w-full flex justify-center scroll-mt-24">
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full mt-12">
+      <section id="experience" className="w-full flex justify-center scroll-mt-24 mt-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
           <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2 text-[#222]">Experience</h1>
           <div className="flex flex-col gap-10">
             {experiences.map((exp, idx) => (
@@ -132,8 +132,8 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="w-full flex justify-center scroll-mt-24">
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full mt-12">
+      <section id="projects" className="w-full flex justify-center scroll-mt-24 mt-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
           <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2 text-[#222]">Personal Projects</h1>
           <div className="bg-[#f7f7f7] border border-[#e0e0e0] rounded p-6 shadow-sm mb-8">
             <h2 className="text-xl font-semibold mb-2 text-[#222]">Proctoral Web Tensor : AI-Powered Online Exam Monitoring System</h2>
@@ -153,8 +153,8 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="w-full flex justify-center scroll-mt-24">
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full mt-12">
+      <section id="achievements" className="w-full flex justify-center scroll-mt-24 mt-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
           <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2 text-[#222]">Achievements & Competitive Programming</h1>
           <ul className="list-disc ml-5 text-[#333] text-base space-y-2 mb-8">
             <li>Global Rank 123 in CodeChef Infinity 2k21</li>
@@ -175,8 +175,8 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="w-full flex justify-center scroll-mt-24 mb-12">
-        <div className="bg-white rounded-xl shadow-lg p-8 max-w-xl w-full mt-12">
+      <section id="contact" className="w-full flex justify-center scroll-mt-24 mt-16 mb-12">
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl w-full">
           <h1 className="text-2xl font-bold mb-6 border-b border-[#e0e0e0] pb-2 text-[#222]">Contact</h1>
           <div className="mb-6">
             <div className="mb-2"><span className="font-medium text-[#222]">Phone:</span> <a href="tel:+918178231961" className="text-[#6c757d] hover:underline">+91 8178231961</a></div>
