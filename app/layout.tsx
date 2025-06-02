@@ -53,7 +53,7 @@ export default function RootLayout({
           <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
             <span>Noida, Delhi NCR</span>
             <span>&bull;</span>
-            <span>+91 8178231961</span>
+            <span>+91 xxxxyyyyzz</span>
             <span>&bull;</span>
             <a href="mailto:kr.ankit253@gmail.com" className="hover:underline">
               kr.ankit253@gmail.com
